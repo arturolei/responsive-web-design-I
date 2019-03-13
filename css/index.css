@@ -66,16 +66,31 @@ h1, h2, h3, h4, h5 {
 }
 
 .container{
-	width:950px;
-	
+	max-width:950px;
+	width:100%;
 	margin: auto;
 }
+
+@media(max-width:500px){
+    .container{
+        width:100%;
+    }
+}
+
 
 header{
 	display:flex;
 	flex-flow:row wrap;
 	justify-content: space-between;
 	align-items:center;
+}
+
+@media(max-width:500px){
+    header{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content:center;
+    }
 }
 
 header nav {
@@ -88,15 +103,47 @@ header nav {
 	width:71%;
 }
 
+@media(max-width:500px){
+    header nav{
+        margin:0px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+        width:100%;
+    }
+}
+
 header nav a{
 	margin-right: auto;
 	color:grey;
 	text-decoration: none;
 	font-size:15px;
 }
+
+@media(max-width:500px){
+    header nav a{
+        border-top: 1px solid black;
+        width:100%;
+        padding:20px;
+        text-align:center;
+        font-size:22px;
+    }
+
+    header nav a:last-child{
+        border-bottom:1px solid black;
+    }
+}
+
 header .logo{
 	margin-right:50px;
 	margin-top: 20px;
+}
+
+@media(max-width:500px){
+    header .logo{
+        margin: 20px auto;
+    }
 }
 
 /*Styles the div elements in the bigger div .intro-block */
@@ -118,6 +165,13 @@ header .logo{
 	width:400px;
 }
 
+@media(max-width:500px){
+    .intro-block .image_div{
+        display:none;
+    }
+
+}
+
 /*Styles the section of text containing "Innovation on demand"*/
 .intro-block .innovation{
 	margin:40px;
@@ -126,6 +180,21 @@ header .logo{
 	width:300px;
 	height: 400px;
 }
+
+@media (max-width:500px){
+    .intro-block .innovation{
+        margin-top: 40px;
+        margin-bottom:10%;
+        margin-right: auto;
+        margin-left:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        height:auto;
+    }
+}
+
 
 /*Styles affecting the start button */
 .start_button{
@@ -140,6 +209,12 @@ header .logo{
 	border:1px solid black;
 }
 
+@media (max-width:500px){
+    .start_button{
+        margin:20px auto;
+    }
+}
+
 .intro-block .innovation h1{
 	font-size:78px;
 	padding:20px;
@@ -147,8 +222,20 @@ header .logo{
 	width: 310px;
 	margin-top: 40px;
 	margin-bottom:0px;
-	padding-bottom:0px;
+	padding:0px 10%;
 }
+
+@media (max-width:500px){
+    .intro-block .innovation h1{
+        font-size:75px;
+        text-align: center;
+        width: 78%;
+        margin-top: 10px;
+        margin-bottom:0px;
+        padding-bottom:0px;
+    }
+}
+
 
 /*.content-row = first row of content */
 .content-row{
@@ -156,11 +243,22 @@ header .logo{
 	width: 876px;
 	height:150px;
 	margin:0 30px;
-	border-top:1px solid black;
+	border-top:2px solid black;
 	display:flex;
 	flex-flow:row wrap;
 	align-items: flex-start;
 
+}
+@media(max-width:500px){
+    .content-row{
+        flex-direction:column;
+        justify-content:flex-start;
+        width:90%;
+        height:auto;
+        margin:20px auto;
+        padding:0px;
+        padding-top:1%;
+    }
 }
 
 /*This affects the CSS of the <div> elements in the the first row of content*/
@@ -171,34 +269,82 @@ header .logo{
 	height:100px;
 }
 
+@media(max-width:500px){
+    .container .content-row div{
+        margin-top:50px;
+        margin-bottom:0px;
+        width:100%;
+        
+    }
+}
+
 
 /*The middle image class is applied to the image. */
 .middle-img{
 	margin:0px 30px;
 }
 
+@media(max-width:500px){
+    .middle-img{
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+        
+        
+    }
+}
+
 /*.bottom-section is that row of content following the image*/
 .bottom-section{
 	width: 876px;
-  margin: 0 30px;
+    margin: 0 30px;
 	margin-bottom: 35px;
-  border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 	padding-bottom: 20px;
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:space-between;
 	align-items: flex-end;
 }
-
+@media(max-width:500px){
+    .bottom-section{
+        width: 90%;
+        border-bottom: 2px solid black;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:flex-start;
+        margin: 10px auto;
+        padding-bottom:0px;
+    }
+}
 /*The <div>'s that are in that row of content with class="bottom-section"'*/
 .bottom-section div{
 	width:275px;
 	margin:30px 0px;
 }
 
+@media(max-width:500px){
+    .bottom-section div{
+        width:100%;
+        margin-top:4%;
+        margin-bottom:8%;
+    }
+
+    .bottom-section div p{
+        width:97%;
+    }
+}
+
 /*Gave the contact section a little breathing room above and below*/
 .contact-section{
 	margin:30px 30px
+}
+
+@media(max-width:500px){
+    .contact-section{
+
+    margin-bottom:0px;
+    }
 }
 
 /*STyles the <span> with phone-number class*/
@@ -224,13 +370,20 @@ footer .footer-content{
 	text-align:center;
 }
 
+@media(max-width:500px){
+    .copyright{
+        font-size:16px;
+    }
+}
+
 /*CSS for the services.html*/
 
 
 
 
 .services-container{
-	width:880px;
+    max-width:880px;
+    width:100%;
 	margin:auto;
 }
 
@@ -242,6 +395,11 @@ footer .footer-content{
 	margin-right:0px;
 }
 
+@media (max-width:500px){
+    .services-container .logo{
+        display:none;
+    }
+}
 
 .services-intro-section{
 	display:flex;
@@ -276,6 +434,13 @@ footer .footer-content{
 	border-bottom:2px solid black;
 }
 
+@media(max-width:500px){
+    .services-mid-section{
+        display:flex;
+        flex-flow:column wrap;
+    }
+}
+
 /*The CSS styles for "Learn more" boxes and components such as buttons in the "mid-section"*/
 .services-mid-section div {
 	width:420px;
@@ -290,6 +455,13 @@ footer .footer-content{
 	height:220px;
 	background-color: whitesmoke;
 }
+
+@media(max-width:500px){
+    .services-mid-section div{
+        width:100%;
+    }
+}
+
 
 .services-mid-section div p {
 	margin:10px 0px;
