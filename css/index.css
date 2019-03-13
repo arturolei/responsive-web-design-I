@@ -1,3 +1,349 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.container{
+	width:950px;
+	
+	margin: auto;
+}
+
+header{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	align-items:center;
+}
+
+header nav {
+	margin-top:30px;
+	margin-bottom:10px;
+	margin-left: 0px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	width:71%;
+}
+
+header nav a{
+	margin-right: auto;
+	color:grey;
+	text-decoration: none;
+	font-size:15px;
+}
+header .logo{
+	margin-right:50px;
+	margin-top: 20px;
+}
+
+/*Styles the div elements in the bigger div .intro-block */
+.intro-block{
+	display:flex;
+	flex-flow:row wrap;
+	align-items: center;
+}
+
+.intro-block div{
+	margin-top: 40px;
+}
+
+/*styles the image in the intro-block*/
+.intro-block .image_div{
+	margin-left:10px;
+	margin-right: 0px;
+	margin-bottom:50px;
+	width:400px;
+}
+
+/*Styles the section of text containing "Innovation on demand"*/
+.intro-block .innovation{
+	margin:40px;
+	margin-right: 74px;
+	margin-left: 104px;
+	width:300px;
+	height: 400px;
+}
+
+/*Styles affecting the start button */
+.start_button{
+	height:30px;
+	width: 150px;
+	text-align:center;
+	margin-top:20px;
+	background-color: white;
+	margin-left:80px;
+	text-shadow: none;
+	font-size:14px;
+	border:1px solid black;
+}
+
+.intro-block .innovation h1{
+	font-size:78px;
+	padding:20px;
+	text-align: center;
+	width: 310px;
+	margin-top: 40px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+/*.content-row = first row of content */
+.content-row{
+	padding:0px;
+	width: 876px;
+	height:150px;
+	margin:0 30px;
+	border-top:1px solid black;
+	display:flex;
+	flex-flow:row wrap;
+	align-items: flex-start;
+
+}
+
+/*This affects the CSS of the <div> elements in the the first row of content*/
+.container .content-row div{
+	margin: 20px 0px;
+	margin-left:0px;
+	width:430px;
+	height:100px;
+}
+
+
+/*The middle image class is applied to the image. */
+.middle-img{
+	margin:0px 30px;
+}
+
+/*.bottom-section is that row of content following the image*/
+.bottom-section{
+	width: 876px;
+  margin: 0 30px;
+	margin-bottom: 35px;
+  border-bottom: 1px solid black;
+	padding-bottom: 20px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	align-items: flex-end;
+}
+
+/*The <div>'s that are in that row of content with class="bottom-section"'*/
+.bottom-section div{
+	width:275px;
+	margin:30px 0px;
+}
+
+/*Gave the contact section a little breathing room above and below*/
+.contact-section{
+	margin:30px 30px
+}
+
+/*STyles the <span> with phone-number class*/
+.phone-number{
+	display:block;
+	margin-top: 16px;
+	margin-bottom:16px;
+}
+
+/*footer styling*/
+footer{
+	display:flex;
+	justify-content:center;
+}
+
+footer .footer-content{
+	margin:30px;
+}
+
+/*Styles the <p> element with the copyright information*/
+.copyright{
+	font-size:14px;
+	text-align:center;
+}
+
+/*CSS for the services.html*/
+
+
+
+
+.services-container{
+	width:880px;
+	margin:auto;
+}
+
+.services-container header nav a{
+	margin-left:0px;
+}
+
+.services-container .logo{
+	margin-right:0px;
+}
+
+
+.services-intro-section{
+	display:flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items:center;
+	height: 380px;
+	border-bottom: 1px solid black;
+	width:100%;
+}
+
+
+.services-intro-section div{
+	width:100%;
+	margin:15px 0px;
+}
+
+.services-intro-section div h1{
+	font-size:28px;
+}
+
+
+/*CSS Styles for the the "mid-section" all the six little boxes*/
+.services-mid-section{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:space-between;
+	padding-top:35px;
+	padding-bottom:10px;
+	margin-bottom:35px;
+	width:100%;
+	border-bottom:2px solid black;
+}
+
+/*The CSS styles for "Learn more" boxes and components such as buttons in the "mid-section"*/
+.services-mid-section div {
+	width:420px;
+	padding:20px;
+	border:1px solid black;
+	margin-right:0px;
+	margin-bottom:32px;
+	display:flex;
+	flex-flow: column nowrap;
+	justify-content:space-between;
+	align-items:flex-start;
+	height:220px;
+	background-color: whitesmoke;
+}
+
+.services-mid-section div p {
+	margin:10px 0px;
+	width:99%;
+	font-size:16px;
+}
+
+.services-mid-section div h2 {
+	margin:5px 0px;
+}
+.services-mid-section div button{
+	
+	text-shadow: none;
+	border:1px solid black;
+	border-radius:5px;
+	text-align:center;
+	width:140px;
+	height:50px;
+	margin: 0px 0px;
+	font-size:11px;
+ 
+}
+
+
+/*CSS for the "services-bottom" basically where the image and "Some facts about our service" section live*/
+.services-bottom{
+	display:flex;
+	flex-flow:row wrap;
+	width:100%;
+	align-items:flex-start;
+	justify-content:space-between;
+	margin-bottom:30px
+}
+
+.services-bottom div{
+	width:50%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+}
+
+
+
+.services-bottom div p{
+	width: 91%;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.services-bottom div ul{
+	list-style-type:square;
+	margin-left:5%;
+}
+
+.services-bottom div ul li{
+	margin-top:10px;
+}
