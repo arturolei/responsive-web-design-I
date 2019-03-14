@@ -74,14 +74,15 @@ h1, h2, h3, h4, h5 {
 @media(max-width:800px){
     .container{
         width:100%;
-        background-color:beige;
+
+        /*background-color:beige;*/
     }
 }
 
 @media(max-width:500px){
     .container{
         width:100%;
-        background-color:pink;
+        /*background-color:pink;*/
     }
 }
 
@@ -190,14 +191,20 @@ header .logo{
 
 @media(max-width:800px){
     header .logo{
-        margin: 20px auto;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-right: 22%;
+        margin-left: 26%;
     }
 }
 
 
 @media(max-width:500px){
     header .logo{
-        margin: 20px auto;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-right: 20%;
+        margin-left: 26%;
     }
 }
 
@@ -444,7 +451,7 @@ header .logo{
 	width: 876px;
     margin: 0 30px;
 	margin-bottom: 35px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 	padding-bottom: 20px;
 	display:flex;
 	flex-flow:row wrap;
@@ -495,7 +502,6 @@ header .logo{
     }
 }
 
-
 @media(max-width:500px){
     .bottom-section div{
         width:100%;
@@ -504,7 +510,7 @@ header .logo{
     }
 
     .bottom-section div p{
-        width:97%;
+        width:98%;
     }
 }
 
@@ -552,8 +558,9 @@ footer .footer-content{
 	text-align:center;
 }
 
+/*NB: I thought the font for the copyright looked bigger at 800px */
 @media(max-width:800px){
-    .copy-right{
+    .copyright{
         font-size:16px;
     }
 }
