@@ -1,3 +1,572 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.container{
+	max-width:950px;
+	width:100%;
+	margin: auto;
+}
+
+@media(max-width:800px){
+    .container{
+        width:100%;
+
+        /*background-color:beige;*/
+    }
+}
+
+@media(max-width:500px){
+    .container{
+        width:100%;
+        /*background-color:pink;*/
+    }
+}
+
+
+
+header{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+    align-items:center;
+    width:90%;
+    margin:0 auto;
+}
+
+
+@media(max-width:800px){
+    header{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content:center;
+        width:100%;
+    }
+}
+
+
+@media(max-width:500px){
+    header{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content:center;
+    }
+}
+
+
+header nav {
+	margin-top:30px;
+	margin-bottom:10px;
+	margin-left: 0px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	width:71%;
+}
+
+@media(max-width:800px){
+    header nav{
+        margin:0px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
+    }
+}
+
+@media(max-width:500px){
+    header nav{
+        margin:0px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+        width:100%;
+    }
+}
+
+
+
+header nav a{
+	margin-right: auto;
+	color:grey;
+	text-decoration: none;
+	font-size:15px;
+}
+
+@media(max-width:800px){
+    header nav a{
+        padding:20px;
+        text-align:center;
+        font-size:16px;
+        margin:0px 2%;
+    }
+
+}
+
+@media(max-width:500px){
+    header nav a{
+        border-top: 1px solid black;
+        width:100%;
+        padding:20px;
+        text-align:center;
+        font-size:22px;
+    }
+
+    header nav a:last-child{
+        border-bottom:1px solid black;
+    }
+}
+
+
+
+header .logo{
+	margin-right:2%;
+	margin-top: 1.5%;
+}
+
+@media(max-width:800px){
+    header .logo{
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-right: 22%;
+        margin-left: 26%;
+    }
+}
+
+
+@media(max-width:500px){
+    header .logo{
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-right: 20%;
+        margin-left: 26%;
+    }
+}
+
+
+
+/*Styles the div elements in the bigger div .intro-block */
+.intro-block{
+	display:flex;
+	flex-flow:row wrap;
+	align-items: center;
+}
+
+@media(max-width:800px){
+    .intro-block {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+
+}
+
+.intro-block div{
+	margin-top: 40px;
+}
+
+/*styles the image in the intro-block*/
+.intro-block .image_div{
+	margin-left:10px;
+	margin-right: 0px;
+	margin-bottom:50px;
+	width:400px;
+}
+
+
+@media(max-width:800px){
+    .intro-block .image_div{
+        display:none;
+    }
+
+}
+@media(max-width:500px){
+    .intro-block .image_div{
+        display:none;
+    }
+
+}
+
+
+
+/*Styles the section of text containing "Innovation on demand"*/
+.intro-block .innovation{
+	margin:40px;
+	margin-right: 74px;
+	margin-left: 104px;
+	width:300px;
+	height: 400px;
+}
+
+@media (max-width:800px){
+    .intro-block .innovation{
+        margin-top: 40px;
+        margin-bottom:10%;
+        margin-right: auto;
+        margin-left:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        height:auto;
+    }
+}
+
+@media (max-width:500px){
+    .intro-block .innovation{
+        margin-top: 40px;
+        margin-bottom:5%;
+        margin-right: auto;
+        margin-left:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        height:auto;
+    }
+}
+
+
+
+
+/*Styles affecting the start button */
+.start_button{
+	height:30px;
+	width: 150px;
+	text-align:center;
+	margin-top:20px;
+	background-color: white;
+	margin-left:80px;
+	text-shadow: none;
+	font-size:14px;
+	border:1px solid black;
+}
+
+
+@media (max-width:800px){
+    .start_button{
+        margin:20px auto;
+    }
+}
+
+
+@media (max-width:500px){
+    .start_button{
+        margin:20px auto;
+    }
+}
+
+
+.intro-block .innovation h1{
+	font-size:78px;
+	padding:20px;
+	text-align: center;
+	width: 310px;
+	margin-top: 40px;
+	margin-bottom:0px;
+	padding:0px 10%;
+}
+
+
+@media (max-width:800px){
+    .intro-block .innovation h1{
+        font-size:500%;
+        text-align: center;
+        width: 57%;
+        margin-top: 10px;
+        margin-bottom:0px;
+        padding-bottom:0px;
+       /* background-color:aqua;*/
+    }
+}
+
+@media (max-width:500px){
+    .intro-block .innovation h1{
+        font-size:456%;
+        text-align: center;
+        width: 78%;
+        margin-top: 10px;
+        margin-bottom:0px;
+        padding-bottom:0px;
+        /*background-color:red;*/
+    }
+}
+
+
+/*.content-row = first row of content */
+.content-row{
+	padding:0px;
+	width: 876px;
+	height:150px;
+	margin:0 30px;
+	border-top:2px solid black;
+	display:flex;
+	flex-flow:row wrap;
+	align-items: flex-start;
+
+}
+
+@media(max-width:800px){
+    .content-row{
+        flex-direction:row;
+        width:90%;
+        height:auto;
+        margin:20px auto;
+        padding:0px;
+        padding-top:1%;
+    }
+}
+
+@media(max-width:500px){
+    .content-row{
+        flex-direction:column;
+        justify-content:flex-start;
+        width:90%;
+        height:auto;
+        margin:20px auto;
+        padding:0px;
+        padding-top:1%;
+    }
+}
+
+/*This affects the CSS of the <div> elements in the the first row of content*/
+.container .content-row div{
+	margin: 20px 0px;
+	margin-left:0px;
+	width:50%;
+	height:100px;
+}
+
+@media(max-width:800px){
+    .container .content-row div{
+        margin-top:3%;
+        margin-bottom:0px;
+        width:50%;
+        padding-left:1%; 
+    }
+}
+@media(max-width:500px){
+    .container .content-row div{
+        margin-top:50px;
+        margin-bottom:0px;
+        width:100%;
+        
+    }
+}
+
+
+/*The middle image class is applied to the image. */
+.middle-img{
+	margin:0px 30px;
+}
+
+@media(max-width:800px){
+    .middle-img{
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+        margin-top:5%;
+        
+    }
+}
+
+
+@media(max-width:500px){
+    .middle-img{
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+        margin-top:5%;
+        
+    }
+}
+
+/*.bottom-section is that row of content following the image*/
+.bottom-section{
+	width: 876px;
+    margin: 0 30px;
+	margin-bottom: 35px;
+    border-bottom: 2px solid black;
+	padding-bottom: 20px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	align-items: flex-end;
+}
+
+@media(max-width:800px){
+    .bottom-section{
+        width: 90%;
+        border-bottom: 2px solid black;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content:flex-start;
+        margin: 10px auto;
+        padding-bottom:0px;
+    }
+}
+
+@media(max-width:500px){
+    .bottom-section{
+        width: 90%;
+        border-bottom: 2px solid black;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:flex-start;
+        margin: 10px auto;
+        padding-bottom:0px;
+    }
+}
+/*The <div>'s that are in that row of content with class="bottom-section"'*/
+.bottom-section div{
+	width:31%;
+	margin:30px 0px;
+}
+
+@media(max-width:800px){
+    .bottom-section div{
+        width:32%;
+        margin-top:4%;
+        margin-bottom:5%;
+        padding-left:1%;
+        margin-right:1%;
+    }
+
+    .bottom-section div p{
+        width:95%;
+    }
+}
+
+@media(max-width:500px){
+    .bottom-section div{
+        width:100%;
+        margin-top:4%;
+        margin-bottom:8%;
+    }
+
+    .bottom-section div p{
+        width:98%;
+    }
+}
+
+/*Gave the contact section a little breathing room above and below*/
+.contact-section{
+	margin:30px 30px
+}
+
+@media(max-width:800px){
+    .contact-section{
+    width:90%;
+    padding-left:2%;
+    }
+}
+
+
+@media(max-width:500px){
+    .contact-section{
+    width:90%;
+    padding:0;
+    margin-bottom:0px;
+    }
+}
+
+/*STyles the <span> with phone-number class*/
+.phone-number{
+	display:block;
+	margin-top: 16px;
+	margin-bottom:16px;
+}
+
+/*footer styling*/
+footer{
+	display:flex;
+	justify-content:center;
+}
+
+footer .footer-content{
+	margin:30px;
+}
+
+/*Styles the <p> element with the copyright information*/
+.copyright{
+	font-size:14px;
+	text-align:center;
+}
+
+/*NB: I thought the font for the copyright looked bigger at 800px */
+@media(max-width:800px){
+    .copyright{
+        font-size:16px;
+    }
+}
+
+@media(max-width:500px){
+    .copyright{
+        font-size:16px;
+    }
+}
